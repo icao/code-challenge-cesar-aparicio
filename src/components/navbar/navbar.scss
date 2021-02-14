@@ -1,0 +1,39 @@
+@import "../../scss/palette";
+@import "../../scss/fonts";
+
+.navbar {
+  background-color: $color-grey-dark;
+  width: 100%;
+  height: 70px;
+  color: $color-alice-blue;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    &__link {
+      color: $color-alice-blue;
+      text-decoration: none;
+      font-family: $font-open-sans;
+    }
+  }
+}
+
+.logo-title {
+  margin-left: 0.5rem;
+  color: $color-alice-blue;
+  font-family: $font-open-sans;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 30px;
+  height: auto;
+}

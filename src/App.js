@@ -1,10 +1,18 @@
-import './App.scss'
+import React from "react";
+import Navbar from "./components/navbar/Navbar";
+import "./App.scss";
+import Home from "./components/pages/Home";
 
 function App() {
   return (
-    <div className="">
-      <h1>Poke App</h1>
-    </div>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main className="container">
+        <Home />
+      </main>
+    </>
   );
 }
 
