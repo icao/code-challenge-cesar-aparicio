@@ -1,0 +1,79 @@
+@import "../../scss/fonts";
+@import "../../scss/palette";
+
+.card {
+  // padding: 0.5rem;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: $font-open-sans;
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    // background-color: #510a32;
+    background-color: $color-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 500px) {
+      // font-size: 14px;
+      // padding: 0;
+    }
+
+    @media screen and (min-width: 500px) {
+      // font-size: 16px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      // font-size: 20px;
+      // min-width: 350px;
+    }
+  }
+  &__body {
+    padding: 1rem;
+    @media screen and (max-width: 500px) {
+      // font-size: 14px;
+      padding: 0.5rem;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $color-grey-thin;
+    padding: 1rem;
+    @media screen and (max-width: 500px) {
+      // font-size: 14px;
+      padding: 0.5rem;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    @media screen and (max-width: 500px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    // padding: 0;
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: 16px;
+    min-width: inherit;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    min-width: 350px;
+  }
+}

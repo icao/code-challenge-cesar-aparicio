@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import pokeball from "../../assets/pokeball.png";
 const Navbar = () => {
@@ -9,9 +10,13 @@ const Navbar = () => {
         <span className="logo-title">POKE APP</span>
       </div>
       <div className="navbar__menu">
-        <a href="#" className="navbar__menu__link">
+        <NavLink
+          to="/about"
+          activeClassName="navbar__menu__link--active"
+          className="navbar__menu__link"
+        >
           About
-        </a>
+        </NavLink>
       </div>
     </nav>
   );

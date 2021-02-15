@@ -1,0 +1,35 @@
+@import "../../scss/palette";
+.pokemon {
+  &__button {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $color-orange;
+      color: $color-alice-blue;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $color-orange-accent;
+      border: none;
+      border-radius: 0;
+      color: $color-alice-blue;
+    }
+  }
+
+  &__number {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  &__name {
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+}

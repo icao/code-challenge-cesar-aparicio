@@ -1,29 +1,46 @@
 import React, { useState } from "react";
 import useFetchPokemons from "../../hooks/useFetchPokemons";
-// import PokemonDetail from "../pokemon-detail/PokemonDetail";
+import PokemonDetails from "../pokemon-details/PokemonDetails";
+import useFetchDetailsPokemon from "../../hooks/useFetchDetailsPokemon";
 import Pokemon from "../pokemon/Pokemon";
+import "./PokemonList.scss";
 
 const PokemonList = () => {
-  // const [pokemons, setPokemons] = useState([]);
-
   const [pokemons, error, isLoading] = useFetchPokemons();
-  console.log("--------------------------------------------");
-  // console.log("esta cargando...", isLoading);
-  // console.log("RESULTADOS: ", pokemons);
-  console.log("ERROR:..", error);
+  let [numberPokemon, setNumberPokemon] = useState(null);
+  const [detailsPokemon] = useFetchDetailsPokemon(numberPokemon);
+
+  function getDetailPokemon(number) {
+    setNumberPokemon(number);
+  }
+
+  // console.log(detailsPokemon);
+
   return (
     <>
       {isLoading && <h2>Loading....</h2>}
-      {/* {error && <h2>{error}</h2>} */}
+      {error && <h2>{error}</h2>}
       {!isLoading && (
         <>
           <div className="pokemon-list">
-            <h3>Click on any Pokemon to see more details about it:</h3>
-            {pokemons.map((pokemon, index) => {
-              return <Pokemon key={`${index}-${pokemon.name}`} {...pokemon} />;
-            })}
+            <h3 className="pokemon-list__title">
+              Click on any Pokemon to see more details about it:
+            </h3>
+            {pokemons.map((pokemon, index) => (
+              <Pokemon
+                key={index}
+                number={index + 1}
+                {...pokemon}
+                getDetailPokemon={getDetailPokemon}
+              />
+            ))}
           </div>
-          {/* <PokemonDetail url={pokemon.url} /> */}
+
+          <div className="pokemon-detail">
+            {detailsPokemon.length !== 0 && (
+              <PokemonDetails {...detailsPokemon} />
+            )}
+          </div>
         </>
       )}
     </>

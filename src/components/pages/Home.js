@@ -1,11 +1,14 @@
 import React from "react";
 import PokemonList from "../pokemon-list/PokemonList";
+import "./Home.scss";
 
 const Home = () => {
   return (
-    <>
-      <PokemonList />
-    </>
+    <div className="section">
+      <div className="home-container">
+        <PokemonList />
+      </div>
+    </div>
   );
 };
 
