@@ -1,10 +1,3 @@
-// export function getPokemons() {
-//   const ULR = "https://pokeapi.co/api/v2/pokemon?limit=10";
-//   return fetch(ULR)
-//     .then((response) => response.json())
-//     .then((resp) => console.log(resp.results));
-// }
-
 export async function getPokemons() {
   const URL = "https://pokeapi.co/api/v2/pokemon?limit=10";
   try {

@@ -2,34 +2,28 @@
 
 .container {
   @media screen and (max-width: 500px) {
-    // background-color: #c42fff33;
     padding: 0 1rem;
   }
 
   @media screen and (min-width: 500px) {
-    // background-color: #acff2f3b;
     padding: 0 4rem;
   }
 
   @media screen and (min-width: 1200px) {
-    // background-color: #ff000036;
     padding: 0 8rem;
   }
 }
 
 .section {
   @media screen and (max-width: 500px) {
-    // background-color: #c42fff33;
     padding: 1rem 1rem;
   }
 
   @media screen and (min-width: 500px) {
-    // background-color: #acff2f3b;
     padding: 2.5rem 2.5rem;
   }
 
   @media screen and (min-width: 1200px) {
-    // background-color: #ff000036;
     padding: 4rem 5rem;
   }
 }

@@ -2,7 +2,6 @@
 .home-container {
   display: flex;
   justify-content: space-evenly;
-  // justify-content: space-around;
   color: $color-grey-regular;
 
   & > * {
@@ -11,15 +10,5 @@
 
   @media screen and (max-width: 500px) {
     flex-direction: column;
-  }
-
-  @media screen and (min-width: 500px) {
-    // background-color: #acff2f3b;
-    // padding: 2.5rem 2.5rem;
-  }
-
-  @media screen and (min-width: 1200px) {
-    // background-color: #ff000036;
-    // padding: 4rem 5rem;
   }
 }

@@ -14,8 +14,6 @@ const PokemonList = () => {
     setNumberPokemon(number);
   }
 
-  // console.log(detailsPokemon);
-
   return (
     <>
       {isLoading && <h2>Loading....</h2>}
